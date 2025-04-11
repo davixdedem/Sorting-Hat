@@ -1,7 +1,5 @@
 # Sorting Hat + Docker
 
-<img src="images/Docker.jpg" alt="Alt text" width="400">
-
 Recognizing the importance of **open source**, we strived to build a solid project. We believe **Docker** is one of the most reliable solutions for creating ready-to-use projects, ensuring ease of deployment and scalability.<br>
 We offer two straightforward methods to build *Sorting Hat* from scratch. 
 While we recommend using the prebuilt Docker image directly, you’re also free to build `Dockerfile`.<br><br>
@@ -50,7 +48,7 @@ git clone --branch docker https://github.com/davixdedem/Sorting-Hat.git
 
 - Enter the directory:
 ```
-cd dedemx-docker
+cd Sorting-Hat
 ```
 
 - Download all submodules:
@@ -58,10 +56,10 @@ cd dedemx-docker
 git submodule update --init --recursive
 ```
 
-- Explicitly set them to track `docker`:
+- Explicitly set them to track `main`:
 ```
-git submodule foreach --recursive git checkout docker
-git submodule foreach --recursive git pull origin docker
+git submodule foreach --recursive git checkout main
+git submodule foreach --recursive git pull origin main
 ```
 
 - Build docker (*this will take a while*):
@@ -75,9 +73,9 @@ docker build --no-cache -t sorting-hat-docker .
 
 Run it and get a command shell:
 ```
-docker run --rm --gpus all -p 8888:8888 -it -v $(pwd)/src:/app sorting-hat-docker /bin/bash
+docker run --rm --privileged -p 8888:8888 -it -v $(pwd)/src:/app sorting-hat-docker /bin/bash
 ```
-- Start **DedemX**:
+- Start **Sorting hat**:
 ```
 python3 main.py
 ```
