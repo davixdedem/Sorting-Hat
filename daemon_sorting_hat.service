@@ -9,10 +9,10 @@ User=magix
 RemainAfterExit=yes
 WorkingDirectory=/opt/Sorting-Hat/
 ExecStartPre=/bin/bash -c "docker stop sorting-hat-docker 2>/dev/null || true && docker rm sorting-hat-docker 2>/dev/null || true"
-ExecStart=/bin/bash -c "docker run -d --priviliged \
-    --name dedemx-dev \
+ExecStart=/bin/bash -c "docker run -d --privileged \
+    --name sorting-hat-docker \
     -p 8888:8888 \
-    -v $(pwd)/src:/app
+    -v $(pwd)/src:/app \
     sorting-hat-docker python3 /app/main.py"
 ExecStop=/bin/bash -c "docker stop sorting-hat-docker && docker rm sorting-hat-docker"
 
