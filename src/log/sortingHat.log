@@ -1,0 +1,9 @@
+INFO:root:2025-04-11 09:21:33.336360   Error reading wav duration: file does not start with RIFF id
+INFO:root:2025-04-11 09:21:33.341938   Playing audio: tracks/1.wav
+INFO:root:2025-04-11 09:21:33.342187   Motion ON for 0.00 seconds
+INFO:werkzeug:192.168.50.6 - - [11/Apr/2025 09:21:33] "POST /api/play_track HTTP/1.1" 200 -
+INFO:root:2025-04-11 09:21:33.347788   Motion OFF
+INFO:root:2025-04-11 09:22:48.914256   Audio duration: 10.816530612244899
+INFO:root:2025-04-11 09:22:48.919765   Motion ON for 10.82 seconds
+INFO:root:2025-04-11 09:22:48.922390   Playing audio: tracks/1.wav
+INFO:werkzeug:192.168.50.6 - - [11/Apr/2025 09:22:48] "POST /api/play_track HTTP/1.1" 200 -
