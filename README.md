@@ -9,15 +9,15 @@ The current repository contains all the *Sorting Hat* repositories:<br>
 Before starting please check all the [Requirements]().
 
 # Requirements
-- **CPU**: x86_64 architecture (Intel/AMD processor)
-- **RAM**: At least 8GB (16GB+ recommended for larger workloads)
-- **Storage**: At least 20GB free space (Docker image + dependencies)<br>
-- **Docker**: Docker Engine installed (Follow the installation guide for Ubuntu [here](https://docs.docker.com/engine/install/ubuntu/)
+- **CPU**: ARMv7 (for Raspberry Pi 3) or ARMv8 (for Raspberry Pi 4) architecture
+- **RAM**: At least 2GB (4GB+ recommended for larger workloads)
+- **Storage**: At least 8GB free space (Docker image + dependencies, may vary based on workload)
+- **Docker**: Docker Engine installed (Follow the installation guide for Raspberry Pi here: https://docs.docker.com/engine/install/raspberry-pi/)
 
 # Getting started
-*-5 minutes-*<br>
-**Docker Engine** is the core component of Docker, responsible for managing and running containers on your system. For detailed installation instructions, please refer to the official Docker installation guide for Ubuntu:
-**Docker Engine Installation Guide**.<br> 
+*-5 minutes-*<br> 
+**Docker Engine** is the core component of Docker, responsible for managing and running containers on your system. For detailed installation instructions, please refer to the official Docker installation guide for Raspberry Pi: **Docker Engine Installation Guide for Raspberry Pi**.<br>
+This will direct users to the correct installation guide for Raspberry Pi rather than the one for Ubuntu. Let me know if you need more changes!
 
 # How to Build
 
@@ -37,7 +37,6 @@ docker pull sorting-hat-linux/arm32v7-cuda-supported
 Please notes:
 - arm32v7: For Raspberry Pi 3 and older models, which use 32-bit ARM.
 - arm64v7: For Raspberry Pi 4 and later, which can use 64-bit ARM (depending on OS and Raspberry Pi configuration).
-
 
 ### Method 2
 *-39 minutes-*<br>
@@ -75,15 +74,15 @@ Run it and get a command shell:
 ```
 docker run --rm --privileged -p 8888:8888 -it -v $(pwd)/src:/app sorting-hat-docker /bin/bash
 ```
-- Start **Sorting hat**:
+- Start **Sorting Hat**:
 ```
 python3 main.py
 ```
 **You're done!**
 
-# How to inference
+# How to let it speak!
 
-If you'd like to try an inference, we provide an example script **ready-to-run**.
+If you'd like to try a shot, we provide an example script **ready-to-run**.
 
 - Get a command shell and run the example:
 ```
