@@ -5,7 +5,7 @@ lib64
 pyenv.cfg
 
 src/__pycache__
-log/*
+src/log/*
 src/tracks/*
 
 !src/log/.gitkeep
