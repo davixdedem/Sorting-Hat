@@ -1,0 +1,4 @@
+[submodule "src/Sorting_Hat"]
+	path = src/Sorting_Hat
+	url = https://github.com/davixdedem/Sorting-Hat.git
+	branch = docker

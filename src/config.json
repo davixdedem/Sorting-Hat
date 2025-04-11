@@ -1,5 +1,0 @@
-{
-    "logging": "true",
-    "motion_gpio": "17",
-    "tracks_dir": "tracks/"
-}
