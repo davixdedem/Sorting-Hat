@@ -1,0 +1,12 @@
+bin/*
+include/*
+lib/*
+lib64
+pyenv.cfg
+
+src/__pycache__
+log/*
+src/tracks/*
+
+!src/log/.gitkeep
+!src/tracks/.gitkeep
