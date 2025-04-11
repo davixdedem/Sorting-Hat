@@ -26,18 +26,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     wget \
     git \
+    alsa-utils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# (Optional) If not using the base image with Python 3.11.2,
-# you can build from source instead. Uncomment below if needed.
-#RUN wget https://www.python.org/ftp/python/3.11.2/Python-3.11.2.tgz && \
-#    tar -xvzf Python-3.11.2.tgz && \
-#    cd Python-3.11.2 && \
-#    ./configure --enable-optimizations && \
-#    make -j$(nproc) && \
-#    make altinstall && \
-#    cd .. && rm -rf Python-3.11.2 Python-3.11.2.tgz
 
 # Install Python dependencies
 RUN pip install --upgrade pip \
