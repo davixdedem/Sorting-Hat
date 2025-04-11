@@ -88,3 +88,14 @@ If you'd like to try a shot, we provide an example script **ready-to-run**.
 ```
 docker exec -it $(docker ps -qf "ancestor=sorting-hat-docker") bash -c "python3 main.py"
 ```
+
+###  Method 2
+Copy daemon service to systemd directory:
+```
+sudo cp daemon_sorting_hat.service /etc/systemd/system/ && sudo systemctl daemon-reload
+```
+Enable service and start it:
+```
+sudo systemctl enable daemon_sorting_hat && sudo systemctl start daemon_sorting_hat
+```
+
