@@ -1,5 +1,5 @@
 # Start from a lightweight ARM-compatible base
-FROM arm64v8/python:3.11.2-slim
+FROM arm32v7/python:3.11.2-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     git \
     alsa-utils \
+    ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
